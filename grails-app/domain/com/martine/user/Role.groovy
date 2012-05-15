@@ -4,6 +4,8 @@ class Role {
 
 	String authority
 
+	Date dateCreated
+
 	static mapping = {
 		cache true
 	}
@@ -11,4 +13,5 @@ class Role {
 	static constraints = {
 		authority blank: false, unique: true
 	}
+
 }

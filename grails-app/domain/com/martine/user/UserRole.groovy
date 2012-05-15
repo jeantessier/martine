@@ -7,6 +7,8 @@ class UserRole implements Serializable {
 	User user
 	Role role
 
+	Date dateCreated
+
 	boolean equals(other) {
 		if (!(other instanceof UserRole)) {
 			return false
@@ -54,4 +56,5 @@ class UserRole implements Serializable {
 		id composite: ['role', 'user']
 		version false
 	}
+
 }

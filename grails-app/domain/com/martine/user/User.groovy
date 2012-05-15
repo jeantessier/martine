@@ -11,8 +11,11 @@ class User {
 	boolean accountLocked
 	boolean passwordExpired
 
+	Date dateCreated
+	Date lastUpdated
+
 	static constraints = {
-		username blank: false, unique: true
+		username blank: false, unique: true, email: true
 		password blank: false
 	}
 
@@ -37,4 +40,5 @@ class User {
 	protected void encodePassword() {
 		password = springSecurityService.encodePassword(password)
 	}
+
 }
